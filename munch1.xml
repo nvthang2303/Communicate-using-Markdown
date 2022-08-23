@@ -208,8 +208,6 @@
     <bool name="support_provision_app_permission">true</bool>
     <!--whether support pre-installed application-->
     <bool name="support_pre_installed_application">true</bool>
-    <!--wheater support validate device when syste upadte -->
-    <bool name="support_ota_validate">true</bool>
     <!--whether show basic info items-->
     <bool name="support_show_basic_items">true</bool>
     <!--whether show my device-->
@@ -218,8 +216,6 @@
     <bool name="support_round_corner">true</bool>
     <!--wheater support show credentials-->
     <bool name="support_credentials">true</bool>
-    <!--whether support main show XiaoAi-->
-    <bool name="support_main_xiaoai">true</bool>
     <!--battery capacity typ of the device-->
     <string name="battery_capacity_typ">4520</string>
     <!--the vendor feature, it's value may be qcom,mediatek,leadcore or nvidia-->
@@ -270,7 +266,7 @@
     <!-- type of soter finger pay, config by owner of soter -->
     <integer name="type_soter_finger_pay">2</integer>
     <!-- wheter the device support widevine l1, 1: support, 2: ota_support -->
-    <integer name="support_widevine_l1">1</integer>
+    <integer name="support_widevine_l1">2</integer>
     <!-- finger record, config by owner -->
     <integer name="type_mqs_finger_record">3</integer>
     <!--wheater the device supports persist screen color in driver-->
@@ -338,8 +334,8 @@
     </string-array>
     <string-array name="camera_adjust_picture_size_cmd_list_pro">
         <!-- camera id 0 set sensor size 64M, camera id 1 set sensor size 20M -->
-        <item>com.ludashi:0, add, 9248, 6944, 33,true</item>
-        <item>com.ludashi:1, add, 5184, 3904, 33,true</item>
+        <item>com.ludashi:0, add, 9248, 6944, 33,false</item>
+        <item>com.ludashi:1, add, 5184, 3904, 33,false</item>
         <!-- camera id 0 set sensor size 64M, camera id 1 set sensor size 20M -->
         <item>com.antutu:0, ssize, 9248, 6944;1, ssize, 5184, 3904</item>
         <!-- camera id 1 limit picture-size <= 1920x1080 -->
@@ -356,66 +352,6 @@
     <bool name="support_new_silentmode">true</bool>
     <!-- whether CN hardware can flash Global rom -->
     <bool name="enable_flash_global">true</bool>
-    <!-- Support Sign Verify In Cust Partition-->
-    <bool name="support_sign_verify_in_cust">true</bool>
-    <!--Add for the system data-app which could uninstall by user-->
-    <string-array name="system_data_packagename_list">
-        <item>com.xiaomi.pass</item>
-        <item>com.xiaomi.scanner</item>
-        <item>com.xiaomi.gamecenter</item>
-        <item>com.miui.weather2</item>
-        <item>com.miui.notes</item>
-        <item>com.miui.compass</item>
-        <item>com.miui.calculator</item>
-        <item>com.android.email</item>
-        <item>com.miui.cleanmaster</item>
-        <item>com.mi.misupport</item>
-        <item>com.mfashiongallery.emag</item>
-        <item>com.miui.personalassistant</item>
-        <item>com.miui.voip</item>
-        <item>com.miui.yellowpage</item>
-        <item>com.xiaomi.midrop</item>
-        <item>com.android.midrive</item>
-        <item>com.xiaomi.drivemode</item>
-        <item>com.miui.smarttravel</item>
-        <item>com.android.soundrecorder</item>
-        <item>com.miui.screenrecorder</item>
-    </string-array>
-    <!--system data-app path list -->
-    <string-array name="system_data_path_list">
-        <item>/system/data-app/XMPass/XMPass.apk</item>
-        <item>/system/data-app/MiuiScanner/MiuiScanner.apk</item>
-        <item>/system/data-app/GameCenter/GameCenter.apk</item>
-        <item>/system/data-app/MIUIWeatherGlobal/MIUIWeatherGlobal.apk</item>
-        <item>/system/data-app/MIUINotes/MIUINotes.apk</item>
-        <item>/system/data-app/MIUICompassGlobal/MIUICompassGlobal.apk</item>
-        <item>/system/data-app/MIUICalculatorGlobal/MIUICalculatorGlobal.apk</item>
-        <item>/system/data-app/Email/Email.apk</item>
-        <item>/system/data-app/CleanMaster/CleanMaster.apk</item>
-        <item>/system/data-app/MiSupport/MiSupport.apk</item>
-        <item>/system/data-app/com.duokan.reader/com.duokan.reader.apk</item>
-        <item>/system/data-app/MIGalleryLockScreenGlobal/MIGalleryLockScreenGlobal.apk</item>
-        <item>/system/data-app/PersonalAssistant/PersonalAssistant.apk</item>
-        <item>/system/data-app/MiuiVoip/MiuiVoip.apk</item>
-        <item>/system/data-app/MIUIYellowPageGlobal/MIUIYellowPageGlobal.apk</item>
-        <item>/system/data-app/MIDrop/MIDrop.apk</item>
-        <item>/system/data-app/MiDrive/MiDrive.apk</item>
-        <item>/system/data-app/MiuiDriveMode/MiuiDriveMode.apk</item>
-        <item>/system/data-app/SmartTravel/SmartTravel.apk</item>
-        <item>/system/data-app/MIUISoundRecorderTargetSdk30Global/MIUISoundRecorderTargetSdk30Global.apk</item>
-        <item>/system/data-app/MIUIScreenRecorderLiteGlobal/MIUIScreenRecorderLiteGlobal.apk</item>
-    </string-array>
-    <!--global uninstallable system app package list-->
-    <string-array name="global_uninstallable_system_packagename_list">
-        <item>com.xiaomi.scanner</item>
-        <item>com.miui.weather2</item>
-        <item>com.miui.notes</item>
-        <item>com.miui.compass</item>
-        <item>com.miui.calculator</item>
-        <item>com.xiaomi.midrop</item>
-        <item>com.android.soundrecorder</item>
-        <item>com.miui.screenrecorder</item>
-    </string-array>
     <!--whether surpport paper mode animation-->
     <bool name="support_papermode_animation">true</bool>
     <!--whether paper mode and screen effect is compatible-->
@@ -478,7 +414,6 @@
     <integer name="smart_fps_value">120</integer>
     <integer-array name="fpsList">
         <item>120</item>
-        <item>90</item>
         <item>60</item>
     </integer-array>
     <integer name="defaultFps">60</integer>
